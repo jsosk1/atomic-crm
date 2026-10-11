@@ -962,6 +962,10 @@
           "type": "registry:lib"
         },
         {
+          "path": "src/lib/serviceWorkerUpdates.ts",
+          "type": "registry:lib"
+        },
+        {
           "path": "CHANGELOG.md",
           "type": "registry:file",
           "target": "~/CHANGELOG.md"
