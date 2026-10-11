@@ -13,6 +13,7 @@ import { ContactCreateSheet } from "../contacts/ContactCreateSheet";
 import { useState } from "react";
 import { NoteCreateSheet } from "../notes/NoteCreateSheet";
 import { TaskCreateSheet } from "../tasks/TaskCreateSheet";
+import { DealCreateSheet } from "../deals/DealCreateSheet";
 
 export const MobileNavigation = () => {
   const location = useLocation();
@@ -122,6 +123,7 @@ const CreateButton = () => {
   const [contactCreateOpen, setContactCreateOpen] = useState(false);
   const [noteCreateOpen, setNoteCreateOpen] = useState(false);
   const [taskCreateOpen, setTaskCreateOpen] = useState(false);
+  const [dealCreateOpen, setDealCreateOpen] = useState(false);
 
   return (
     <>
@@ -137,6 +139,11 @@ const CreateButton = () => {
       <TaskCreateSheet
         open={taskCreateOpen}
         onOpenChange={setTaskCreateOpen}
+        contact_id={contact_id}
+      />
+      <DealCreateSheet
+        open={dealCreateOpen}
+        onOpenChange={setDealCreateOpen}
         contact_id={contact_id}
       />
       <DropdownMenu>
@@ -174,6 +181,14 @@ const CreateButton = () => {
             }}
           >
             {translate("resources.tasks.forcedCaseName")}
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            className="h-12 px-4 text-base"
+            onSelect={() => {
+              setDealCreateOpen(true);
+            }}
+          >
+            {translate("resources.deals.name", { smart_count: 1 })}
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
