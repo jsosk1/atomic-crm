@@ -50,10 +50,3 @@ export function formatISODateString(dateString: string) {
 
   return format(date, "PP");
 }
-
-/** Today's date as YYYY-MM-DD in the user's local timezone (not UTC). */
-export const getTodayISODate = () => format(new Date(), "yyyy-MM-dd");
-
-/** True if a YYYY-MM-DD date is strictly before today, in local time. */
-export const isPastISODate = (dateString: string) =>
-  isoDateStringRegex.test(dateString) && dateString < getTodayISODate();

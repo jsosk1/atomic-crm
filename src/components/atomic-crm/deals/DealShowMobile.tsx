@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { isValid } from "date-fns";
 import { Check, ChevronDown } from "lucide-react";
 import {
   InfiniteListBase,
@@ -33,7 +32,7 @@ import { NotesIterator } from "../notes/NotesIterator";
 import { useConfigurationContext } from "../root/ConfigurationContext";
 import type { Deal } from "../types";
 import { ContactList } from "./ContactList";
-import { findDealLabel, formatISODateString, isPastISODate } from "./dealUtils";
+import { findDealLabel } from "./dealUtils";
 import { moveDealToStage } from "./moveDealToStage";
 import { useFormatDealAmount } from "./useFormatDealAmount";
 
@@ -90,20 +89,6 @@ const DealShowContentMobile = () => {
           <div className="grid grid-cols-2 gap-4">
             <Field label={translate("resources.deals.fields.amount")}>
               {formatAmount(record.amount)}
-            </Field>
-            <Field
-              label={translate("resources.deals.fields.expected_closing_date")}
-            >
-              <span className="flex flex-wrap items-center gap-2">
-                {isValid(new Date(record.expected_closing_date))
-                  ? formatISODateString(record.expected_closing_date)
-                  : translate("resources.deals.invalid_date")}
-                {isPastISODate(record.expected_closing_date) ? (
-                  <Badge variant="destructive">
-                    {translate("crm.common.past")}
-                  </Badge>
-                ) : null}
-              </span>
             </Field>
             {record.category && (
               <Field label={translate("resources.deals.fields.category")}>
