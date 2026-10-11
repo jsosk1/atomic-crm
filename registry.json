@@ -570,7 +570,19 @@
           "type": "registry:component"
         },
         {
+          "path": "src/components/atomic-crm/deals/useFormatDealAmount.ts",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/components/atomic-crm/deals/updateDealStage.ts",
+          "type": "registry:component"
+        },
+        {
           "path": "src/components/atomic-crm/deals/stages.ts",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/components/atomic-crm/deals/moveDealToStage.ts",
           "type": "registry:component"
         },
         {
@@ -586,7 +598,15 @@
           "type": "registry:component"
         },
         {
+          "path": "src/components/atomic-crm/deals/DealShowMobile.tsx",
+          "type": "registry:component"
+        },
+        {
           "path": "src/components/atomic-crm/deals/DealShow.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/components/atomic-crm/deals/DealListMobile.tsx",
           "type": "registry:component"
         },
         {
