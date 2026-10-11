@@ -116,7 +116,7 @@ export type ContactNote = {
 
 export type Deal = {
   name: string;
-  company_id: Identifier;
+  company_id: Identifier | null;
   contact_ids: Identifier[];
   category: string;
   stage: string;
@@ -181,7 +181,7 @@ export type ActivityContactNoteCreated = {
 
 export type ActivityDealCreated = {
   type: typeof DEAL_CREATED;
-  company_id: Identifier;
+  company_id: Identifier | null;
   sales_id?: Identifier;
   deal: Deal;
   date: string;

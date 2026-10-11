@@ -48,7 +48,6 @@ const DealLinkedToInputs = () => {
       <ReferenceInput source="company_id" reference="companies">
         <AutocompleteCompanyInput
           label="resources.deals.fields.company_id"
-          validate={required()}
           modal
         />
       </ReferenceInput>

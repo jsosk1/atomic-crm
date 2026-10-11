@@ -1,10 +1,15 @@
-import { type RaRecord, useGetIdentity, useTranslate } from "ra-core";
+import {
+  type RaRecord,
+  useGetIdentity,
+  useRecordContext,
+  useTranslate,
+} from "ra-core";
 
 import { ReferenceField } from "@/components/admin/reference-field";
 import { CompanyAvatar } from "../companies/CompanyAvatar";
 import { RelativeDate } from "../misc/RelativeDate";
 import { useGetSalesName } from "../sales/useGetSalesName";
-import type { ActivityDealNoteCreated } from "../types";
+import type { ActivityDealNoteCreated, Deal } from "../types";
 import { useActivityLogContext } from "./ActivityLogContext";
 import { ActivityLogNote } from "./ActivityLogNote";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -60,19 +65,14 @@ export function ActivityLogDealNoteCreated({
             {context !== "company" && (
               <>
                 {" "}
-                {translate("crm.activity.at_company")}{" "}
                 <ReferenceField
                   source="deal_id"
                   reference="deals"
                   record={dealNote}
                   link={false}
                 >
-                  <ReferenceField
-                    source="company_id"
-                    reference="companies"
-                    link="show"
-                  />
-                </ReferenceField>{" "}
+                  <DealCompanyLabel />
+                </ReferenceField>
                 <RelativeDate date={activity.date} />
               </>
             )}
@@ -90,3 +90,20 @@ export function ActivityLogDealNoteCreated({
     />
   );
 }
+
+// Renders "at <company>" only when the deal is linked to a company
+const DealCompanyLabel = () => {
+  const translate = useTranslate();
+  const deal = useRecordContext<Deal>();
+  if (deal?.company_id == null) return null;
+  return (
+    <>
+      {translate("crm.activity.at_company")}{" "}
+      <ReferenceField
+        source="company_id"
+        reference="companies"
+        link="show"
+      />{" "}
+    </>
+  );
+};
