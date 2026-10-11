@@ -1,6 +1,10 @@
 import { commands } from "vitest/browser";
 
-import { formatISODateString } from "./dealUtils";
+import {
+  formatISODateString,
+  getTodayISODate,
+  isPastISODate,
+} from "./dealUtils";
 
 describe("formatISODateString", () => {
   let originalTimezone: string;
@@ -50,5 +54,26 @@ describe("formatISODateString", () => {
     expect(() => formatISODateString(invalidDate)).toThrow(
       "Invalid date format. Expected YYYY-MM-DD.",
     );
+  });
+});
+
+describe("isPastISODate", () => {
+  it("returns false for today's date", () => {
+    expect(isPastISODate(getTodayISODate())).toBe(false);
+  });
+
+  it("returns true for yesterday and false for tomorrow", () => {
+    const yesterday = new Date();
+    yesterday.setDate(yesterday.getDate() - 1);
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    const toISODate = (date: Date) =>
+      `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+    expect(isPastISODate(toISODate(yesterday))).toBe(true);
+    expect(isPastISODate(toISODate(tomorrow))).toBe(false);
+  });
+
+  it("returns false for an invalid date string", () => {
+    expect(isPastISODate("not-a-date")).toBe(false);
   });
 });

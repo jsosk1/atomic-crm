@@ -27,7 +27,7 @@ import { NotesIterator } from "../notes/NotesIterator";
 import { useConfigurationContext } from "../root/ConfigurationContext";
 import type { Deal } from "../types";
 import { ContactList } from "./ContactList";
-import { findDealLabel, formatISODateString } from "./dealUtils";
+import { findDealLabel, formatISODateString, isPastISODate } from "./dealUtils";
 
 export const DealShow = ({ open, id }: { open: boolean; id?: string }) => {
   const redirect = useRedirect();
@@ -96,7 +96,7 @@ const DealShowContent = () => {
                     ? formatISODateString(record.expected_closing_date)
                     : translate("resources.deals.invalid_date")}
                 </span>
-                {new Date(record.expected_closing_date) < new Date() ? (
+                {isPastISODate(record.expected_closing_date) ? (
                   <Badge variant="destructive">
                     {translate("crm.common.past")}
                   </Badge>

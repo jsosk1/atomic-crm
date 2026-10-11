@@ -33,7 +33,7 @@ import { NotesIterator } from "../notes/NotesIterator";
 import { useConfigurationContext } from "../root/ConfigurationContext";
 import type { Deal } from "../types";
 import { ContactList } from "./ContactList";
-import { findDealLabel, formatISODateString } from "./dealUtils";
+import { findDealLabel, formatISODateString, isPastISODate } from "./dealUtils";
 import { moveDealToStage } from "./moveDealToStage";
 import { useFormatDealAmount } from "./useFormatDealAmount";
 
@@ -98,7 +98,7 @@ const DealShowContentMobile = () => {
                 {isValid(new Date(record.expected_closing_date))
                   ? formatISODateString(record.expected_closing_date)
                   : translate("resources.deals.invalid_date")}
-                {new Date(record.expected_closing_date) < new Date() ? (
+                {isPastISODate(record.expected_closing_date) ? (
                   <Badge variant="destructive">
                     {translate("crm.common.past")}
                   </Badge>

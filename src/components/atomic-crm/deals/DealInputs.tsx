@@ -12,6 +12,7 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import { contactOptionText } from "../misc/ContactOption";
 import { useConfigurationContext } from "../root/ConfigurationContext";
 import { AutocompleteCompanyInput } from "../companies/AutocompleteCompanyInput.tsx";
+import { getTodayISODate } from "./dealUtils";
 
 export const DealInputs = () => {
   const isMobile = useIsMobile();
@@ -89,7 +90,7 @@ const DealMiscInputs = () => {
         validate={required()}
         source="expected_closing_date"
         helperText={false}
-        defaultValue={new Date().toISOString().split("T")[0]}
+        defaultValue={getTodayISODate()}
       />
       <SelectInput
         source="stage"
