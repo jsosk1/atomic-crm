@@ -88,6 +88,11 @@ export const frenchCrmMessages = {
         background: "Informations de contexte",
         has_newsletter: "Abonné à la newsletter",
         sales_id: "Responsable de compte",
+        address: "Adresse",
+        city: "Ville",
+        workplace: "Entreprise / lieu de travail",
+        birthday: "Date de naissance",
+        anniversary: "Anniversaire",
       },
       action: {
         add: "Ajouter un contact",
@@ -652,6 +657,7 @@ export const frenchCrmMessages = {
       update_error: "Une erreur s'est produite. Veuillez réessayer",
     },
     validation: {
+      invalid_date: "Date invalide, utilisez JJ/MM/AAAA",
       invalid_url: "Doit être une URL valide",
       invalid_linkedin_url: "L'URL doit provenir de linkedin.com",
     },

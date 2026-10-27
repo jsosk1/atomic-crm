@@ -85,6 +85,11 @@ export const englishCrmMessages = {
         background: "Background info (bio, how you met, etc)",
         has_newsletter: "Has newsletter",
         sales_id: "Account manager",
+        address: "Address",
+        city: "City",
+        workplace: "Company / workplace",
+        birthday: "Birthday",
+        anniversary: "Anniversary",
       },
       action: {
         add: "Add contact",
@@ -644,6 +649,7 @@ export const englishCrmMessages = {
       update_error: "An error occurred. Please try again",
     },
     validation: {
+      invalid_date: "Invalid date, use DD/MM/YYYY",
       invalid_url: "Must be a valid URL",
       invalid_linkedin_url: "URL must be from linkedin.com",
     },

@@ -1,4 +1,5 @@
 import {
+  address,
   company as fakerCompany,
   internet,
   lorem,
@@ -96,6 +97,15 @@ export const generateContacts = (db: Db, size = 500): Required<Contact>[] => {
       sales_id: company.sales_id!,
       nb_tasks: 0,
       linkedin_url: null,
+      address: weightedBoolean(60) ? address.streetAddress() : null,
+      city: weightedBoolean(60) ? "Asunción" : null,
+      workplace: weightedBoolean(50) ? fakerCompany.companyName() : null,
+      birthday: weightedBoolean(50)
+        ? randomDate(new Date(1960, 0, 1), new Date(2000, 0, 1))
+            .toISOString()
+            .split("T")[0]
+        : null,
+      anniversary: null,
     };
   });
 };

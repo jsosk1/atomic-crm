@@ -14,7 +14,6 @@ import {
   useTranslate,
 } from "ra-core";
 import { AutocompleteInput } from "@/components/admin/autocomplete-input";
-import { DateInput } from "@/components/admin/date-input";
 import { SaveButton } from "@/components/admin/form";
 import { ReferenceField } from "@/components/admin/reference-field";
 import { ReferenceInput } from "@/components/admin/reference-input";
@@ -28,6 +27,7 @@ import {
 } from "@/components/ui/dialog";
 
 import { contactOptionText } from "../misc/ContactOption";
+import { DateTextInput } from "../misc/DateTextInput";
 import type { PropertyShare } from "../types";
 import { formatShareDate, getTodayISODate } from "./propertyUtils";
 
@@ -225,7 +225,7 @@ const ShareDialog = ({
                   />
                 </ReferenceInput>
               )}
-              <DateInput
+              <DateTextInput
                 source="shared_at"
                 label="resources.property_shares.fields.shared_at"
                 validate={required()}
