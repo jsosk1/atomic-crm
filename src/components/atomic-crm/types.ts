@@ -165,6 +165,10 @@ export type Property = {
   sales_id?: Identifier | null;
   created_at: string;
   updated_at: string;
+  code: string;
+  listing_agency?: string | null;
+  listed_at?: string | null;
+  status_updated_at?: string | null;
 } & Pick<RaRecord, "id">;
 
 export type PropertyShare = {

@@ -383,6 +383,7 @@ const lifeCycleCallbacks: ResourceCallbacks[] = [
     resource: "properties",
     beforeGetList: async (params) => {
       return applyFullTextSearch([
+        "code",
         "title",
         "address",
         "neighborhood",

@@ -2,6 +2,7 @@ import { address, datatype, lorem, random } from "faker/locale/en_US";
 
 import type { Property, PropertyShare } from "../../../types";
 import type { Db } from "./types";
+import { generatePropertyCode } from "../../../properties/propertyUtils";
 import { randomDate } from "./utils";
 
 const PROPERTY_TYPES = ["house", "apartment", "land", "commercial", "office"];
@@ -49,6 +50,19 @@ export const generateProperties = (db: Db): Property[] =>
       sales_id: random.arrayElement(db.sales).id,
       created_at,
       updated_at: created_at,
+      code: generatePropertyCode(),
+      listing_agency: random.arrayElement([
+        null,
+        "c21",
+        "remax",
+        "independent_agency",
+        "independent_colleague",
+        "several_colleagues",
+      ]),
+      listed_at: created_at.slice(0, 10),
+      status_updated_at: randomDate(new Date(created_at))
+        .toISOString()
+        .slice(0, 10),
     };
   });
 

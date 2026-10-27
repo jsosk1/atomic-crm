@@ -467,3 +467,11 @@ BEGIN
   RETURN NEW;
 END;
 $$;
+
+CREATE OR REPLACE FUNCTION "public"."generate_property_code"() RETURNS "text"
+    LANGUAGE "sql"
+    SET "search_path" TO ''
+    AS $$
+  select string_agg(chr(65 + floor(random() * 26)::int), '')
+  from generate_series(1, 6)
+$$;

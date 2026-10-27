@@ -103,7 +103,12 @@ create table public.properties (
     description text,
     sales_id bigint,
     created_at timestamp with time zone not null default now(),
-    updated_at timestamp with time zone not null default now()
+    updated_at timestamp with time zone not null default now(),
+    code text not null default public.generate_property_code(),
+    listing_agency text,
+    listed_at date default current_date,
+    status_updated_at date default current_date,
+    constraint properties_code_key unique (code)
 );
 
 create table public.property_shares (

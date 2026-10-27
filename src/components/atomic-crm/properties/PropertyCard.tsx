@@ -29,9 +29,10 @@ export const PropertyCard = ({ property }: { property: Property }) => {
               {formatPrice(property.price, property.currency)}
             </span>
           </div>
-          {kind && (
-            <span className="text-sm text-muted-foreground">{kind}</span>
-          )}
+          <span className="text-sm text-muted-foreground">
+            <span className="font-mono tracking-wider">{property.code}</span>
+            {kind && ` · ${kind}`}
+          </span>
           {location && (
             <span className="text-sm text-muted-foreground truncate">
               {location}

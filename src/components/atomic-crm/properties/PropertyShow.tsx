@@ -16,7 +16,7 @@ import { MobileBackButton } from "../misc/MobileBackButton";
 import type { Property } from "../types";
 import { PropertyInputs } from "./PropertyInputs";
 import { PropertySharesList } from "./PropertyShares";
-import { formatPrice } from "./propertyUtils";
+import { formatPrice, formatShareDate } from "./propertyUtils";
 
 export const PropertyShow = () => {
   const isMobile = useIsMobile();
@@ -124,6 +124,9 @@ const PropertyDetails = ({ property }: { property: Property }) => {
   return (
     <div className="flex flex-col gap-6">
       <div className="flex flex-wrap items-center gap-2">
+        <Badge variant="outline" className="font-mono tracking-wider">
+          {property.code}
+        </Badge>
         {property.price != null && (
           <span className="text-2xl font-semibold mr-2">
             {formatPrice(property.price, property.currency)}
@@ -161,7 +164,28 @@ const PropertyDetails = ({ property }: { property: Property }) => {
         )}
       </div>
 
-      {property.agency && <Field label={t("agency")}>{property.agency}</Field>}
+      <div className="grid grid-cols-2 gap-4">
+        {property.agency && (
+          <Field label={t("agency")}>{property.agency}</Field>
+        )}
+        {property.listing_agency && (
+          <Field label={t("listing_agency")}>
+            {translate(
+              `resources.properties.listing_agencies.${property.listing_agency}`,
+            )}
+          </Field>
+        )}
+        {property.listed_at && (
+          <Field label={t("listed_at")}>
+            {formatShareDate(property.listed_at)}
+          </Field>
+        )}
+        {property.status_updated_at && (
+          <Field label={t("status_updated_at")}>
+            {formatShareDate(property.status_updated_at)}
+          </Field>
+        )}
+      </div>
 
       {property.description && (
         <Field label={t("description")}>

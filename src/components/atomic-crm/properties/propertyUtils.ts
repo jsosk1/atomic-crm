@@ -7,16 +7,27 @@ export const PROPERTY_TYPES = [
   "land",
   "commercial",
   "office",
+  "warehouse",
+  "farm",
+  "subdivision",
+  "country_house",
   "other",
 ];
 export const PROPERTY_OPERATIONS = ["sale", "rent"];
+export const LISTING_AGENCIES = [
+  "c21",
+  "remax",
+  "independent_agency",
+  "independent_colleague",
+  "several_colleagues",
+];
 export const PROPERTY_CURRENCIES = [
   { id: "PYG", name: "₲ (PYG)" },
   { id: "USD", name: "US$ (USD)" },
 ];
 export const DEFAULT_CURRENCY = "PYG";
 
-/** Translated { id, name } choices for the property type and operation selects. */
+/** Translated { id, name } choices for the property selects. */
 export const usePropertyChoices = () => {
   const translate = useTranslate();
   return {
@@ -27,6 +38,10 @@ export const usePropertyChoices = () => {
     operationChoices: PROPERTY_OPERATIONS.map((id) => ({
       id,
       name: translate(`resources.properties.operations.${id}`),
+    })),
+    listingAgencyChoices: LISTING_AGENCIES.map((id) => ({
+      id,
+      name: translate(`resources.properties.listing_agencies.${id}`),
     })),
   };
 };
@@ -53,3 +68,9 @@ export const formatShareDate = (date: string | null | undefined) => {
   const [year, month, day] = date.slice(0, 10).split("-");
   return `${day}/${month}/${year}`;
 };
+
+/** Six random uppercase letters, e.g. "KQTBZM" (same rule as the database default). */
+export const generatePropertyCode = () =>
+  Array.from({ length: 6 }, () =>
+    String.fromCharCode(65 + Math.floor(Math.random() * 26)),
+  ).join("");

@@ -353,7 +353,7 @@ export const englishCrmMessages = {
       name: "Property |||| Properties",
       forcedCaseName: "Property",
       fields: {
-        title: "Title",
+        title: "Name",
         property_type: "Type",
         operation: "Operation",
         price: "Price",
@@ -366,13 +366,18 @@ export const englishCrmMessages = {
         built_area: "Built area (m²)",
         land_area: "Land area (m²)",
         parking_spaces: "Parking spaces",
-        agency: "Colleague / agency",
-        description: "Description",
+        agency: "Listing agent",
+        description: "Notes",
+        code: "Code",
+        listing_agency: "Listing agency",
+        listed_at: "Listing date",
+        status_updated_at: "Last update",
       },
       field_categories: {
         basics: "Basics",
         location: "Location",
         features: "Features",
+        listing: "Listing",
         other: "Other",
       },
       types: {
@@ -381,11 +386,22 @@ export const englishCrmMessages = {
         land: "Land",
         commercial: "Commercial",
         office: "Office",
+        warehouse: "Warehouse",
+        farm: "Farm",
+        subdivision: "Subdivision",
+        country_house: "Country house",
         other: "Other",
       },
       operations: {
         sale: "Sale",
         rent: "Rent",
+      },
+      listing_agencies: {
+        c21: "C21",
+        remax: "Remax",
+        independent_agency: "Independent agency",
+        independent_colleague: "Independent colleague",
+        several_colleagues: "Several colleagues",
       },
       action: {
         new: "New property",
@@ -399,6 +415,9 @@ export const englishCrmMessages = {
       },
       shared_with: "Shared with",
       not_shared: "Not shared with anyone yet",
+      validation: {
+        code_taken: "This code is already used by another property",
+      },
     },
     property_shares: {
       name: "Shared property |||| Shared properties",

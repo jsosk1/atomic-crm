@@ -22,6 +22,9 @@ grant all on function public.get_domain_favicon(text) to anon;
 grant all on function public.get_domain_favicon(text) to authenticated;
 grant all on function public.get_domain_favicon(text) to service_role;
 
+grant all on function public.generate_property_code() to authenticated;
+grant all on function public.generate_property_code() to service_role;
+
 grant all on function public.get_note_attachments_function_url() to anon;
 grant all on function public.get_note_attachments_function_url() to authenticated;
 grant all on function public.get_note_attachments_function_url() to service_role;

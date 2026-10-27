@@ -358,7 +358,7 @@ export const frenchCrmMessages = {
       name: "Propriété |||| Propriétés",
       forcedCaseName: "Propriété",
       fields: {
-        title: "Titre",
+        title: "Nom",
         property_type: "Type",
         operation: "Opération",
         price: "Prix",
@@ -371,13 +371,18 @@ export const frenchCrmMessages = {
         built_area: "Surface construite (m²)",
         land_area: "Surface du terrain (m²)",
         parking_spaces: "Places de parking",
-        agency: "Collègue / agence",
-        description: "Description",
+        agency: "Apporteur",
+        description: "Notes",
+        code: "Code",
+        listing_agency: "Agence apporteuse",
+        listed_at: "Date de mise en vente",
+        status_updated_at: "Dernière mise à jour",
       },
       field_categories: {
         basics: "Informations de base",
         location: "Emplacement",
         features: "Caractéristiques",
+        listing: "Mandat",
         other: "Autre",
       },
       types: {
@@ -386,11 +391,22 @@ export const frenchCrmMessages = {
         land: "Terrain",
         commercial: "Local commercial",
         office: "Bureau",
+        warehouse: "Entrepôt",
+        farm: "Exploitation agricole",
+        subdivision: "Lotissement",
+        country_house: "Maison de campagne",
         other: "Autre",
       },
       operations: {
         sale: "Vente",
         rent: "Location",
+      },
+      listing_agencies: {
+        c21: "C21",
+        remax: "Remax",
+        independent_agency: "Agence indépendante",
+        independent_colleague: "Confrère indépendant",
+        several_colleagues: "Plusieurs confrères",
       },
       action: {
         new: "Nouvelle propriété",
@@ -404,6 +420,9 @@ export const frenchCrmMessages = {
       },
       shared_with: "Partagée avec",
       not_shared: "Pas encore partagée",
+      validation: {
+        code_taken: "Ce code est déjà utilisé par un autre bien",
+      },
     },
     property_shares: {
       name: "Propriété partagée |||| Propriétés partagées",
