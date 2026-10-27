@@ -32,6 +32,7 @@ import type { Contact } from "../types";
 import { Avatar } from "./Avatar";
 import { ContactAside } from "./ContactAside";
 import { MobileBackButton } from "../misc/MobileBackButton";
+import { PropertySharesList } from "../properties/PropertyShares";
 
 export const ContactShow = (props: ShowBaseProps = {}) => {
   const isMobile = useIsMobile();
@@ -134,7 +135,7 @@ const ContactShowContentMobile = () => {
         </div>
 
         <Tabs defaultValue="notes" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 h-10">
+          <TabsList className="grid w-full grid-cols-4 h-10">
             <TabsTrigger value="notes">
               {translate("resources.notes.name", { smart_count: 2 })}
             </TabsTrigger>
@@ -145,6 +146,9 @@ const ContactShowContentMobile = () => {
             </TabsTrigger>
             <TabsTrigger value="details">
               {translate("crm.common.details")}
+            </TabsTrigger>
+            <TabsTrigger value="properties">
+              {translate("resources.properties.name", { smart_count: 2 })}
             </TabsTrigger>
           </TabsList>
 
@@ -229,6 +233,10 @@ const ContactShowContentMobile = () => {
               </div>
             </div>
           </TabsContent>
+
+          <TabsContent value="properties" className="mt-4">
+            <PropertySharesList contact_id={record.id} />
+          </TabsContent>
         </Tabs>
       </MobileContent>
     </>
@@ -293,6 +301,14 @@ const ContactShowContent = () => {
             >
               <NotesIterator reference="contacts" showStatus />
             </InfiniteListBase>
+          </CardContent>
+        </Card>
+        <Card className="mt-4">
+          <CardContent>
+            <h3 className="text-lg font-semibold mb-3">
+              {translate("resources.property_shares.name", { smart_count: 2 })}
+            </h3>
+            <PropertySharesList contact_id={record.id} />
           </CardContent>
         </Card>
       </div>

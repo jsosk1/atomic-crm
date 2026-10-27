@@ -286,6 +286,10 @@
           "type": "registry:component"
         },
         {
+          "path": "src/components/atomic-crm/providers/fakerest/dataGenerator/properties.ts",
+          "type": "registry:component"
+        },
+        {
           "path": "src/components/atomic-crm/providers/fakerest/dataGenerator/index.ts",
           "type": "registry:component"
         },
@@ -347,6 +351,38 @@
         },
         {
           "path": "src/components/atomic-crm/providers/commons/activity.ts",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/components/atomic-crm/properties/propertyUtils.ts",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/components/atomic-crm/properties/index.ts",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/components/atomic-crm/properties/PropertyShow.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/components/atomic-crm/properties/PropertyShares.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/components/atomic-crm/properties/PropertyList.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/components/atomic-crm/properties/PropertyInputs.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/components/atomic-crm/properties/PropertyCreate.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/components/atomic-crm/properties/PropertyCard.tsx",
           "type": "registry:component"
         },
         {

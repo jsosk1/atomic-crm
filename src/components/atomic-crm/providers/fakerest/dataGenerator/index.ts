@@ -3,6 +3,7 @@ import { generateContactNotes } from "./contactNotes";
 import { generateContacts } from "./contacts";
 import { generateDealNotes } from "./dealNotes";
 import { generateDeals } from "./deals";
+import { generateProperties, generatePropertyShares } from "./properties";
 import { finalize } from "./finalize";
 import { generateSales } from "./sales";
 import { generateTags } from "./tags";
@@ -19,6 +20,8 @@ export default (): Db => {
   db.deals = generateDeals(db);
   db.deal_notes = generateDealNotes(db);
   db.tasks = generateTasks(db);
+  db.properties = generateProperties(db);
+  db.property_shares = generatePropertyShares(db);
   db.configuration = [
     {
       id: 1,

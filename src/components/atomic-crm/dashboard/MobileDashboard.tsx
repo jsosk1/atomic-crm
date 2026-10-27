@@ -1,4 +1,7 @@
-import { useGetList, useTimeout } from "ra-core";
+import { useGetList, useTimeout, useTranslate } from "ra-core";
+import { Settings } from "lucide-react";
+import { Link } from "react-router";
+import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 
 import type { Contact, ContactNote } from "../types";
@@ -27,6 +30,7 @@ const Wrapper = ({ children }: { children: React.ReactNode }) => {
           />
           <h1 className="text-xl font-semibold">{title}</h1>
         </div>
+        <SettingsLink />
       </MobileHeader>
       <MobileContent>{children}</MobileContent>
     </>
@@ -86,5 +90,22 @@ export const MobileDashboard = () => {
         <DashboardActivityLog />
       </div>
     </Wrapper>
+  );
+};
+
+const SettingsLink = () => {
+  const translate = useTranslate();
+  return (
+    <Button
+      asChild
+      variant="ghost"
+      size="icon"
+      className="rounded-full ml-auto"
+      aria-label={translate("crm.settings.title")}
+    >
+      <Link to="/settings">
+        <Settings className="size-5" />
+      </Link>
+    </Button>
   );
 };

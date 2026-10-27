@@ -20,6 +20,7 @@ import contacts from "../contacts";
 import { Dashboard } from "../dashboard/Dashboard";
 import { MobileDashboard } from "../dashboard/MobileDashboard";
 import deals from "../deals";
+import properties from "../properties";
 import { Layout } from "../layout/Layout";
 import { MobileLayout } from "../layout/MobileLayout";
 import { SignupPage } from "../login/SignupPage";
@@ -269,6 +270,8 @@ const DesktopAdmin = (
       <Resource name="companies" {...companies} />
       <Resource name="contact_notes" />
       <Resource name="deal_notes" />
+      <Resource name="properties" {...properties} />
+      <Resource name="property_shares" />
       <Resource name="tasks" />
       <Resource name="sales" {...sales} />
       <Resource name="tags" />
@@ -338,6 +341,13 @@ const MobileAdmin = (
         </Resource>
         <Resource name="companies" show={CompanyShow} />
         <Resource name="deals" list={DealListMobile} show={DealShowMobile} />
+        <Resource
+          name="properties"
+          list={properties.list}
+          show={properties.show}
+          recordRepresentation={properties.recordRepresentation}
+        />
+        <Resource name="property_shares" />
         <Resource name="tasks" list={MobileTasksList} />
       </Admin>
     </PersistQueryClientProvider>

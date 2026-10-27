@@ -9,6 +9,8 @@ alter table public.contacts enable row level security;
 alter table public.contact_notes enable row level security;
 alter table public.deals enable row level security;
 alter table public.deal_notes enable row level security;
+alter table public.properties enable row level security;
+alter table public.property_shares enable row level security;
 alter table public.sales enable row level security;
 alter table public.tags enable row level security;
 alter table public.tasks enable row level security;
@@ -67,3 +69,15 @@ create policy "Enable update for admins" on public.configuration for update to a
 
 -- Favicons excluded domains
 create policy "Enable access for authenticated users only" on public.favicons_excluded_domains to authenticated using (true) with check (true);
+
+-- Properties
+create policy "Enable read access for authenticated users" on public.properties for select to authenticated using (true);
+create policy "Enable insert for authenticated users only" on public.properties for insert to authenticated with check (true);
+create policy "Enable update for authenticated users only" on public.properties for update to authenticated using (true) with check (true);
+create policy "Enable delete for authenticated users only" on public.properties for delete to authenticated using (true);
+
+-- Property shares
+create policy "Enable read access for authenticated users" on public.property_shares for select to authenticated using (true);
+create policy "Enable insert for authenticated users only" on public.property_shares for insert to authenticated with check (true);
+create policy "Enable update for authenticated users only" on public.property_shares for update to authenticated using (true) with check (true);
+create policy "Enable delete for authenticated users only" on public.property_shares for delete to authenticated using (true);

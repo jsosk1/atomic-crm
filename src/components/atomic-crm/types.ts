@@ -141,6 +141,36 @@ export type DealNote = {
   status?: undefined;
 } & Pick<RaRecord, "id">;
 
+export type Property = {
+  title: string;
+  property_type?: string | null;
+  operation?: string | null;
+  price?: number | null;
+  currency?: string | null;
+  address?: string | null;
+  neighborhood?: string | null;
+  city?: string | null;
+  bedrooms?: number | null;
+  bathrooms?: number | null;
+  built_area?: number | null;
+  land_area?: number | null;
+  parking_spaces?: number | null;
+  agency?: string | null;
+  description?: string | null;
+  sales_id?: Identifier | null;
+  created_at: string;
+  updated_at: string;
+} & Pick<RaRecord, "id">;
+
+export type PropertyShare = {
+  property_id: Identifier;
+  contact_id: Identifier;
+  shared_at: string;
+  comment?: string | null;
+  sales_id?: Identifier | null;
+  created_at: string;
+} & Pick<RaRecord, "id">;
+
 export type Tag = {
   id: number;
   name: string;

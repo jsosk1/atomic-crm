@@ -379,6 +379,23 @@ const lifeCycleCallbacks: ResourceCallbacks[] = [
       return applyFullTextSearch(["name", "category", "description"])(params);
     },
   },
+  {
+    resource: "properties",
+    beforeGetList: async (params) => {
+      return applyFullTextSearch([
+        "title",
+        "address",
+        "neighborhood",
+        "city",
+        "agency",
+        "description",
+      ])(params);
+    },
+    beforeUpdate: async (params) => ({
+      ...params,
+      data: { ...params.data, updated_at: new Date().toISOString() },
+    }),
+  },
 ];
 
 export const getDataProvider = () => {
