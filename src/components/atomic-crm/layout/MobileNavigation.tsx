@@ -62,7 +62,7 @@ export const MobileNavigation = () => {
           "calc(var(--spacing)) * 6" + (isPwa && isWebiOS ? " + 15px" : ""),
       }}
     >
-      <div className="flex justify-center">
+      <div className="flex justify-center items-start px-1">
         <>
           <NavigationButton
             href="/"
@@ -122,13 +122,13 @@ const NavigationButton = ({
     asChild
     variant="ghost"
     className={cn(
-      "flex-col gap-1 h-auto py-2 px-1 rounded-md w-14",
+      "flex-col gap-1 h-auto py-2 px-1 rounded-md flex-auto min-w-0",
       isActive ? null : "text-muted-foreground",
     )}
   >
     <Link to={href}>
       <Icon className="size-6" />
-      <span className="text-[0.6rem] font-medium">{label}</span>
+      <span className="text-[0.6rem] font-medium tracking-tight">{label}</span>
     </Link>
   </Button>
 );
@@ -167,7 +167,7 @@ const CreateButton = () => {
           <Button
             variant="default"
             size="icon"
-            className="h-16 w-16 rounded-full -mt-3"
+            className="h-16 w-16 shrink-0 rounded-full -mt-3"
             aria-label={translate("ra.action.create")}
           >
             <Plus className="size-10" />

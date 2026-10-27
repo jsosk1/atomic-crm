@@ -136,18 +136,18 @@ const ContactShowContentMobile = () => {
 
         <Tabs defaultValue="notes" className="w-full">
           <TabsList className="grid w-full grid-cols-4 h-10">
-            <TabsTrigger value="notes">
+            <TabsTrigger value="notes" className="px-1 text-[0.8rem]">
               {translate("resources.notes.name", { smart_count: 2 })}
             </TabsTrigger>
-            <TabsTrigger value="tasks">
+            <TabsTrigger value="tasks" className="px-1 text-[0.8rem]">
               {translate("crm.common.task_count", {
                 smart_count: taskCount ?? 0,
               })}
             </TabsTrigger>
-            <TabsTrigger value="details">
+            <TabsTrigger value="details" className="px-1 text-[0.8rem]">
               {translate("crm.common.details")}
             </TabsTrigger>
-            <TabsTrigger value="properties">
+            <TabsTrigger value="properties" className="px-1 text-[0.8rem]">
               {translate("resources.properties.name", { smart_count: 2 })}
             </TabsTrigger>
           </TabsList>

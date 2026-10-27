@@ -1,0 +1,655 @@
+import type { CrmMessages } from "./englishCrmMessages";
+
+export const spanishCrmMessages = {
+  resources: {
+    companies: {
+      name: "Empresa |||| Empresas",
+      forcedCaseName: "Empresa",
+      fields: {
+        name: "Nombre de la empresa",
+        website: "Sitio web",
+        linkedin_url: "URL de LinkedIn",
+        phone_number: "Teléfono",
+        created_at: "Creada el",
+        nb_contacts: "Cantidad de contactos",
+        revenue: "Facturación",
+        sector: "Rubro",
+        size: "Tamaño",
+        tax_identifier: "RUC",
+        address: "Dirección",
+        city: "Ciudad",
+        zipcode: "Código postal",
+        state_abbr: "Departamento",
+        country: "País",
+        description: "Descripción",
+        context_links: "Enlaces de contexto",
+        sales_id: "Responsable",
+      },
+      empty: {
+        description: "Parece que tu lista de empresas está vacía.",
+        title: "No se encontraron empresas",
+      },
+      import: {
+        title: "Importar empresas",
+      },
+      field_categories: {
+        contact: "Contacto",
+        additional_info: "Información adicional",
+        address: "Dirección",
+        context: "Contexto",
+      },
+      action: {
+        create: "Crear empresa",
+        edit: "Editar empresa",
+        new: "Nueva empresa",
+        show: "Ver empresa",
+      },
+      added_on: "Agregada el %{date}",
+      followed_by: "Seguida por %{name}",
+      followed_by_you: "Seguida por vos",
+      no_contacts: "Sin contactos",
+      nb_contacts: "%{smart_count} contacto |||| %{smart_count} contactos",
+      nb_deals: "%{smart_count} oportunidad |||| %{smart_count} oportunidades",
+      sizes: {
+        one_employee: "1 empleado",
+        two_to_nine_employees: "2 a 9 empleados",
+        ten_to_forty_nine_employees: "10 a 49 empleados",
+        fifty_to_two_hundred_forty_nine_employees: "50 a 249 empleados",
+        two_hundred_fifty_or_more_employees: "250 empleados o más",
+      },
+      autocomplete: {
+        create_error: "Ocurrió un error al crear la empresa",
+        create_item: "Crear %{item}",
+        create_label: "Escribí para crear una empresa nueva",
+      },
+    },
+    contacts: {
+      name: "Contacto |||| Contactos",
+      forcedCaseName: "Contacto",
+      field_categories: {
+        background_info: "Antecedentes",
+        identity: "Identidad",
+        misc: "Otros",
+        personal_info: "Datos personales",
+        position: "Ocupación",
+      },
+      fields: {
+        first_name: "Nombre",
+        last_name: "Apellido",
+        last_seen: "Último contacto",
+        title: "Cargo",
+        company_id: "Empresa",
+        email_jsonb: "Emails",
+        email: "Email",
+        phone_jsonb: "Teléfonos",
+        phone_number: "Teléfono",
+        linkedin_url: "URL de LinkedIn",
+        background: "Antecedentes (cómo lo conociste, qué busca, etc.)",
+        has_newsletter: "Recibe novedades",
+        sales_id: "Responsable",
+      },
+      action: {
+        add: "Agregar contacto",
+        add_first: "Agregá tu primer contacto",
+        create: "Crear contacto",
+        edit: "Editar contacto",
+        export_vcard: "Exportar a vCard",
+        new: "Nuevo contacto",
+        show: "Ver contacto",
+      },
+      background: {
+        last_activity_on: "Última actividad el %{date}",
+        added_on: "Agregado el %{date}",
+        followed_by: "Seguido por %{name}",
+        followed_by_you: "Seguido por vos",
+        status_none: "Ninguno",
+      },
+      position_at: "%{title} en",
+      position_at_company: "%{title} en %{company}",
+      empty: {
+        description: "Parece que tu lista de contactos está vacía.",
+        title: "No se encontraron contactos",
+      },
+      import: {
+        title: "Importar contactos",
+      },
+      inputs: {
+        genders: {
+          male: "Sr.",
+          female: "Sra.",
+          nonbinary: "Otro",
+        },
+        personal_info_types: {
+          work: "Trabajo",
+          home: "Casa",
+          other: "Otro",
+        },
+      },
+      list: {
+        error_loading: "Error al cargar los contactos",
+      },
+      bulk_tag: {
+        action: "Etiquetar",
+        back: "Volver a las etiquetas",
+        create_description:
+          "Creá una etiqueta nueva y aplicala a los contactos seleccionados.",
+        description:
+          "Elegí una etiqueta existente o creá una nueva para los contactos seleccionados.",
+        empty:
+          "Todavía no hay etiquetas. Creá una para etiquetar los contactos seleccionados.",
+        error: "No se pudo agregar la etiqueta a los contactos",
+        noop: "Los contactos seleccionados ya tienen esta etiqueta",
+        success:
+          "Etiqueta agregada a %{smart_count} contacto |||| Etiqueta agregada a %{smart_count} contactos",
+        title: "Agregar etiqueta a contactos",
+      },
+      merge: {
+        action: "Unir con otro contacto",
+        confirm: "Unir contactos",
+        current_contact: "Contacto actual (se va a borrar)",
+        description: "Unir este contacto con otro.",
+        error: "No se pudieron unir los contactos",
+        merging: "Uniendo...",
+        no_additional_data: "No hay datos adicionales para unir",
+        select_target: "Elegí el contacto con el que querés unirlo",
+        success: "Contactos unidos correctamente",
+        target_contact: "Contacto destino (se conserva)",
+        title: "Unir contacto",
+        warning_description:
+          "Todos los datos pasan al segundo contacto. Esta acción no se puede deshacer.",
+        warning_title: "Atención: operación irreversible",
+        what_will_be_merged: "Qué se va a unir:",
+      },
+      filters: {
+        before_last_month: "Antes del mes pasado",
+        before_this_month: "Antes de este mes",
+        before_this_week: "Antes de esta semana",
+        managed_by_me: "A mi cargo",
+        search: "Buscar por nombre...",
+        this_week: "Esta semana",
+        today: "Hoy",
+        tags: "Etiquetas",
+        tasks: "Tareas",
+      },
+      hot: {
+        empty_change_status:
+          'Cambiá el estado de un contacto agregándole una nota y tocando "Mostrar opciones".',
+        empty_hint: 'Los contactos con estado "Caliente" van a aparecer acá.',
+        title: "Contactos calientes",
+      },
+    },
+    deals: {
+      name: "Oportunidad |||| Oportunidades",
+      fields: {
+        name: "Nombre",
+        description: "Descripción",
+        company_id: "Empresa",
+        contact_ids: "Contactos",
+        category: "Categoría",
+        amount: "Presupuesto",
+        expected_closing_date: "Fecha estimada de cierre",
+        stage: "Etapa",
+      },
+      action: {
+        back_to_deal: "Volver a la oportunidad",
+        create: "Crear oportunidad",
+        new: "Nueva oportunidad",
+      },
+      field_categories: {
+        misc: "Otros",
+      },
+      filters: {
+        only_mine: "Solo las mías",
+      },
+      archived: {
+        action: "Archivar",
+        error: "Error: no se pudo archivar la oportunidad",
+        list_title: "Oportunidades archivadas",
+        success: "Oportunidad archivada",
+        title: "Oportunidad archivada",
+        view: "Ver oportunidades archivadas",
+      },
+      inputs: {
+        linked_to: "Vinculada a",
+      },
+      unarchived: {
+        action: "Volver al tablero",
+        error: "Error: no se pudo desarchivar la oportunidad",
+        success: "Oportunidad desarchivada",
+      },
+      updated: "Oportunidad actualizada",
+      empty: {
+        before_create: "antes de crear una oportunidad.",
+        description: "Parece que tu lista de oportunidades está vacía.",
+        title: "No se encontraron oportunidades",
+      },
+      import: {
+        title: "Importar oportunidades",
+      },
+      invalid_date: "Fecha inválida",
+    },
+    notes: {
+      name: "Nota |||| Notas",
+      forcedCaseName: "Nota",
+      fields: {
+        status: "Estado",
+        date: "Fecha",
+        attachments: "Adjuntos",
+        contact_id: "Contacto",
+        deal_id: "Oportunidad",
+      },
+      action: {
+        add: "Agregar nota",
+        add_first: "Agregá tu primera nota",
+        delete: "Borrar nota",
+        edit: "Editar nota",
+        update: "Actualizar nota",
+        add_this: "Agregar esta nota",
+      },
+      sheet: {
+        create: "Crear nota",
+        create_for: "Crear nota para %{name}",
+        edit: "Editar nota",
+        edit_for: "Editar nota de %{name}",
+      },
+      deleted: "Nota borrada",
+      empty: "Todavía no hay notas",
+      author_added: "%{name} agregó una nota",
+      you_added: "Agregaste una nota",
+      me: "Yo",
+      list: {
+        error_loading: "Error al cargar las notas",
+      },
+      note_for_contact: "Nota para %{name}",
+      stepper: {
+        hint: "Entrá a un contacto y agregale una nota",
+      },
+      added: "Nota agregada",
+      inputs: {
+        add_note: "Agregar una nota",
+        options_hint: "(adjuntar archivos o cambiar detalles)",
+        show_options: "Mostrar opciones",
+      },
+      actions: {
+        attach_document: "Adjuntar documento",
+      },
+      validation: {
+        note_or_attachment_required: "Escribí una nota o adjuntá un archivo",
+      },
+    },
+    sales: {
+      name: "Usuario |||| Usuarios",
+      fields: {
+        first_name: "Nombre",
+        last_name: "Apellido",
+        email: "Email",
+        secondary_email: "Email secundario",
+        secondary_emails: "Emails secundarios",
+        administrator: "Administrador",
+        disabled: "Desactivado",
+      },
+      create: {
+        error: "Ocurrió un error al crear el usuario.",
+        success:
+          "Usuario creado. En breve va a recibir un email para elegir su contraseña.",
+        title: "Crear un usuario nuevo",
+      },
+      edit: {
+        error: "Ocurrió un error. Probá de nuevo.",
+        record_not_found: "No se encontró el registro",
+        success: "Usuario actualizado",
+        title: "Editar a %{name}",
+      },
+      action: {
+        new: "Nuevo usuario",
+      },
+    },
+    tasks: {
+      name: "Tarea |||| Tareas",
+      forcedCaseName: "Tarea",
+      fields: {
+        text: "Descripción",
+        due_date: "Vence",
+        type: "Tipo",
+        contact_id: "Contacto",
+        due_short: "vence",
+      },
+      action: {
+        add: "Agregar tarea",
+        create: "Crear tarea",
+        edit: "Editar tarea",
+      },
+      actions: {
+        postpone_next_week: "Posponer a la semana que viene",
+        postpone_tomorrow: "Posponer a mañana",
+        title: "acciones de la tarea",
+      },
+      added: "Tarea agregada",
+      deleted: "Tarea borrada",
+      dialog: {
+        create: "Crear tarea",
+        create_for: "Crear tarea para %{name}",
+      },
+      sheet: {
+        edit: "Editar tarea",
+        edit_for: "Editar tarea de %{name}",
+      },
+      empty: "Todavía no hay tareas",
+      empty_list_hint:
+        "Las tareas que agregues a tus contactos van a aparecer acá.",
+      filters: {
+        later: "Más adelante",
+        overdue: "Vencidas",
+        this_week: "Esta semana",
+        today: "Hoy",
+        tomorrow: "Mañana",
+        with_pending: "Con tareas pendientes",
+      },
+      regarding_contact: "(Ref.: %{name})",
+      updated: "Tarea actualizada",
+    },
+    properties: {
+      name: "Propiedad |||| Propiedades",
+      forcedCaseName: "Propiedad",
+      fields: {
+        title: "Título",
+        property_type: "Tipo",
+        operation: "Operación",
+        price: "Precio",
+        currency: "Moneda",
+        address: "Dirección",
+        neighborhood: "Barrio",
+        city: "Ciudad",
+        bedrooms: "Dormitorios",
+        bathrooms: "Baños",
+        built_area: "Construido (m²)",
+        land_area: "Terreno (m²)",
+        parking_spaces: "Cocheras",
+        agency: "Colega / inmobiliaria",
+        description: "Descripción",
+      },
+      field_categories: {
+        basics: "Datos básicos",
+        location: "Ubicación",
+        features: "Características",
+        other: "Otros",
+      },
+      types: {
+        house: "Casa",
+        apartment: "Departamento",
+        land: "Terreno",
+        commercial: "Local comercial",
+        office: "Oficina",
+        other: "Otro",
+      },
+      operations: {
+        sale: "Venta",
+        rent: "Alquiler",
+      },
+      action: {
+        new: "Nueva propiedad",
+        create: "Crear propiedad",
+        edit: "Editar propiedad",
+      },
+      empty: {
+        title: "Todavía no hay propiedades",
+        description:
+          "Cargá tu primera propiedad para empezar a compartirla con tus contactos.",
+      },
+      shared_with: "Compartida con",
+      not_shared: "Todavía no se compartió con nadie",
+    },
+    property_shares: {
+      name: "Propiedad compartida |||| Propiedades compartidas",
+      fields: {
+        property_id: "Propiedad",
+        contact_id: "Contacto",
+        shared_at: "Fecha",
+        comment: "Comentario",
+      },
+      action: {
+        share: "Compartir",
+        share_property: "Compartir una propiedad",
+        share_with_contact: "Compartir con un contacto",
+        remove: "Quitar",
+      },
+      empty: "Todavía no se le compartieron propiedades",
+      added: "Propiedad compartida",
+      removed: "Registro quitado",
+      confirm_remove: "¿Quitar este registro?",
+    },
+    tags: {
+      name: "Etiqueta |||| Etiquetas",
+      action: {
+        add: "Agregar etiqueta",
+        create: "Crear etiqueta nueva",
+      },
+      dialog: {
+        color: "Color",
+        create_title: "Crear una etiqueta nueva",
+        edit_title: "Editar etiqueta",
+        name_label: "Nombre de la etiqueta",
+        name_placeholder: "Escribí el nombre",
+      },
+      empty: "Todavía no hay etiquetas.",
+    },
+  },
+  crm: {
+    action: {
+      reset_password: "Restablecer contraseña",
+    },
+    auth: {
+      first_name: "Nombre",
+      last_name: "Apellido",
+      confirm_password: "Confirmar contraseña",
+      confirmation_required:
+        "Abrí el enlace que te enviamos por email para confirmar tu cuenta.",
+      recovery_email_sent:
+        "Si sos un usuario registrado, en breve vas a recibir un email para recuperar tu contraseña.",
+      sign_in_failed: "No se pudo iniciar sesión.",
+      sign_in_google_workspace: "Iniciar sesión con Google Workspace",
+      signup: {
+        create_account: "Crear cuenta",
+        create_first_user:
+          "Creá la primera cuenta de usuario para terminar la configuración.",
+        creating: "Creando...",
+        initial_user_created: "Usuario inicial creado correctamente",
+      },
+      welcome_title: "Bienvenido a tu CRM",
+    },
+    common: {
+      account_manager: "Responsable",
+      activity: "Actividad",
+      added: "agregó",
+      details: "Detalles",
+      last_activity_with_date: "última actividad %{date}",
+      load_more: "Cargar más",
+      misc: "Otros",
+      past: "Vencida",
+      read_more: "Leer más",
+      retry: "Reintentar",
+      show_less: "Mostrar menos",
+      copied: "¡Copiado!",
+      copy: "Copiar",
+      loading: "Cargando...",
+      me: "Yo",
+      task_count: "%{smart_count} tarea |||| %{smart_count} tareas",
+    },
+    changelog: {
+      title: "Novedades",
+    },
+    activity: {
+      added_company: "%{name} agregó la empresa",
+      you_added_company: "Agregaste la empresa",
+      added_contact: "%{name} agregó a",
+      you_added_contact: "Agregaste a",
+      added_note: "%{name} agregó una nota sobre",
+      you_added_note: "Agregaste una nota sobre",
+      added_note_about_deal: "%{name} agregó una nota sobre la oportunidad",
+      you_added_note_about_deal: "Agregaste una nota sobre la oportunidad",
+      added_deal: "%{name} agregó la oportunidad",
+      you_added_deal: "Agregaste la oportunidad",
+      at_company: "en",
+      to: "a",
+      load_more: "Ver más actividad",
+    },
+    dashboard: {
+      deals_chart: "Ingresos esperados de oportunidades",
+      deals_pipeline: "Oportunidades en curso",
+      latest_activity: "Actividad reciente",
+      latest_activity_error: "Error al cargar la actividad reciente",
+      latest_notes: "Mis últimas notas",
+      latest_notes_added_ago: "agregada %{timeAgo}",
+      stepper: {
+        install: "Instalar el CRM",
+        progress: "%{step}/3 listos",
+        whats_next: "¿Qué sigue?",
+      },
+      upcoming_tasks: "Próximas tareas",
+    },
+    data_import: {
+      button: "Importar CSV",
+      complete:
+        "Importación terminada. Se importaron %{importCount} registros, con %{errorCount} errores",
+      csv_file: "Archivo CSV",
+      error:
+        "No se pudo importar este archivo. Revisá que sea un archivo CSV válido.",
+      in_progress: "Importando…",
+      progress:
+        "Importados %{importCount} de %{rowCount} registros, con %{errorCount} errores.",
+      remaining_time: "Tiempo restante estimado:",
+      resource: "Tipo de dato",
+      sample_download: "Descargar CSV de ejemplo",
+      sample_hint:
+        "Este es un archivo CSV de ejemplo que podés usar como modelo",
+      start: "Empezar a importar",
+      stop: "Detener la importación",
+      stopped:
+        "Importación detenida. Se importaron %{importCount} registros, con %{errorCount} errores",
+      title: "Importar datos",
+    },
+    header: {
+      import_data: "Importar desde JSON",
+    },
+    image_editor: {
+      change: "Cambiar",
+      drop_hint: "Soltá un archivo para subirlo, o tocá para elegirlo.",
+      editable_content: "Contenido editable",
+      title: "Subir y ajustar imagen",
+      update_image: "Actualizar imagen",
+    },
+    import: {
+      action: {
+        download_error_report: "Descargar el informe de errores",
+        import: "Importar",
+        import_another: "Importar otro archivo",
+      },
+      error: {
+        unable: "No se pudo importar este archivo.",
+      },
+      idle: {
+        description_1:
+          "Podés importar usuarios, empresas, contactos, notas y tareas.",
+        description_2:
+          "Los datos tienen que estar en un archivo JSON como el siguiente ejemplo:",
+      },
+      status: {
+        all_success: "Todos los registros se importaron correctamente.",
+        complete: "Importación terminada.",
+        failed: "Fallidos",
+        imported: "Importados",
+        in_progress: "Importando. No salgas de esta página.",
+        some_failed: "Algunos registros no se importaron.",
+        table_caption: "Estado de la importación",
+      },
+      title: "Importar desde JSON",
+    },
+    settings: {
+      about: "Acerca de",
+      companies: {
+        sectors: "Rubros",
+      },
+      dark_mode_logo: "Logo para modo oscuro",
+      deals: {
+        categories: "Categorías",
+        currency: "Moneda",
+        pipeline_help:
+          "Elegí qué etapas cuentan como oportunidades concretadas.",
+        pipeline_statuses: "Etapas concretadas",
+        stages: "Etapas",
+      },
+      light_mode_logo: "Logo para modo claro",
+      notes: {
+        statuses: "Estados",
+      },
+      reset_defaults: "Volver a los valores de fábrica",
+      save_error: "No se pudo guardar la configuración",
+      saved: "Configuración guardada",
+      saving: "Guardando...",
+      tasks: {
+        types: "Tipos",
+      },
+      preferences: "Preferencias",
+      title: "Ajustes",
+      app_title: "Nombre de la app",
+      sections: {
+        branding: "Marca",
+      },
+      validation: {
+        duplicate: "%{display_name} repetidas: %{items}",
+        in_use:
+          "No se pueden quitar %{display_name} que todavía usan algunas oportunidades: %{items}",
+        validating: "Validando…",
+        entities: {
+          categories: "categorías",
+          stages: "etapas",
+        },
+      },
+    },
+    theme: {
+      dark: "Oscuro",
+      label: "Tema",
+      light: "Claro",
+      system: "Del sistema",
+    },
+    language: "Idioma",
+    navigation: {
+      label: "Navegación del CRM",
+    },
+    profile: {
+      add_secondary_email: "Agregar un email",
+      email_taken: "%{email} ya lo usa otro usuario",
+      no_secondary_emails: "Ninguno",
+      secondary_email_invalid: "%{email} no es un email válido",
+      secondary_email_is_primary: "%{email} ya es tu email principal",
+      secondary_email_taken: "%{email} ya lo usa otro usuario",
+      too_many_secondary_emails:
+        "No podés agregar más de 10 emails secundarios",
+      secondary_emails_help:
+        "Otras direcciones desde las que enviás emails. Dejá una vacía para quitarla.",
+      inbound: {
+        description:
+          "Podés enviar emails a la dirección de entrada de tu servidor, por ejemplo agregándola en el campo %{field}. El CRM procesa esos emails y agrega notas a los contactos correspondientes.",
+        title: "Email entrante",
+      },
+      mcp: {
+        title: "Servidor MCP",
+        description:
+          "Usá esta URL para conectar tu asistente de IA con los datos de tu CRM mediante el Model Context Protocol (MCP).",
+      },
+      password: {
+        change: "Cambiar contraseña",
+      },
+      password_reset_sent:
+        "Te enviamos un email para restablecer tu contraseña",
+      record_not_found: "No se encontró el registro",
+      title: "Perfil",
+      updated: "Tu perfil se actualizó",
+      update_error: "Ocurrió un error. Probá de nuevo",
+    },
+    validation: {
+      invalid_url: "Tiene que ser una URL válida",
+      invalid_linkedin_url: "La URL tiene que ser de linkedin.com",
+    },
+  },
+} satisfies CrmMessages;

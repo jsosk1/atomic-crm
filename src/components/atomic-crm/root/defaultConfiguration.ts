@@ -27,41 +27,41 @@ export const defaultCompanySectors = [
 ];
 
 export const defaultDealStages = [
-  { value: "opportunity", label: "Opportunity" },
-  { value: "proposal-sent", label: "Proposal Sent" },
-  { value: "in-negociation", label: "In Negotiation" },
-  { value: "won", label: "Won" },
-  { value: "lost", label: "Lost" },
-  { value: "delayed", label: "Delayed" },
+  { value: "opportunity", label: "Oportunidad" },
+  { value: "proposal-sent", label: "Propuesta enviada" },
+  { value: "in-negociation", label: "En negociación" },
+  { value: "won", label: "Ganada" },
+  { value: "lost", label: "Perdida" },
+  { value: "delayed", label: "Postergada" },
 ];
 
 export const defaultDealPipelineStatuses = ["won"];
 
 export const defaultDealCategories = [
-  { value: "other", label: "Other" },
-  { value: "copywriting", label: "Copywriting" },
-  { value: "print-project", label: "Print project" },
-  { value: "ui-design", label: "UI Design" },
-  { value: "website-design", label: "Website design" },
+  { value: "other", label: "Otra" },
+  { value: "copywriting", label: "Redacción" },
+  { value: "print-project", label: "Impresión" },
+  { value: "ui-design", label: "Diseño de interfaz" },
+  { value: "website-design", label: "Diseño web" },
 ];
 
 export const defaultNoteStatuses = [
-  { value: "cold", label: "Cold", color: "#7dbde8" },
-  { value: "warm", label: "Warm", color: "#e8cb7d" },
-  { value: "hot", label: "Hot", color: "#e88b7d" },
-  { value: "in-contract", label: "In Contract", color: "#a4e87d" },
+  { value: "cold", label: "Frío", color: "#7dbde8" },
+  { value: "warm", label: "Tibio", color: "#e8cb7d" },
+  { value: "hot", label: "Caliente", color: "#e88b7d" },
+  { value: "in-contract", label: "En contrato", color: "#a4e87d" },
 ];
 
 export const defaultTaskTypes = [
-  { value: "none", label: "None" },
+  { value: "none", label: "Ninguno" },
   { value: "email", label: "Email" },
-  { value: "demo", label: "Demo" },
-  { value: "lunch", label: "Lunch" },
-  { value: "meeting", label: "Meeting" },
-  { value: "follow-up", label: "Follow-up" },
-  { value: "thank-you", label: "Thank you" },
-  { value: "ship", label: "Ship" },
-  { value: "call", label: "Call" },
+  { value: "demo", label: "Visita" },
+  { value: "lunch", label: "Almuerzo" },
+  { value: "meeting", label: "Reunión" },
+  { value: "follow-up", label: "Seguimiento" },
+  { value: "thank-you", label: "Agradecimiento" },
+  { value: "ship", label: "Envío" },
+  { value: "call", label: "Llamada" },
 ];
 
 export const defaultConfiguration: ConfigurationContextValue = {
